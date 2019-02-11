@@ -1,4 +1,9 @@
-package mohan.com.mykotlinexperiments
+package mohan.com.mykotlinexperiments.basictypes
+
+import mohan.com.mykotlinexperiments.activity.MainActivity
+import mohan.com.mykotlinexperiments.basictypes.constants.LiteralConstants
+import mohan.com.mykotlinexperiments.basictypes.explicitconversion.ExplicitConversion
+import mohan.com.mykotlinexperiments.basictypes.representation.Representation
 
 
 /*
@@ -16,7 +21,8 @@ package mohan.com.mykotlinexperiments
  * limitations under the License.
  */
 class BasicDataTypes{
-    var mAppName :String  = "\tMy-Exp-1:"
+    var mAppName :String  = MainActivity().mAppName;
+    //var mAppName :String  = "\tMy-Exp-1:"
     var mRefernceLink :String = "https://www.tutorialspoint.com/kotlin/kotlin_basic_types.htm"
 
     /*Number DataTypes*/
@@ -43,7 +49,7 @@ class BasicDataTypes{
     val escapedString : String  = "I am escaped String!\t!@#$%"
 
 
-    fun DataTypeRunMethods(){
+    fun DataTypeFunctions(){
         showLoop1()
         println("<=------------BasicDataTypes------------=>")
         println("<=------------Numbers---------------=>")
@@ -53,8 +59,14 @@ class BasicDataTypes{
         println("<=------------Boolean-------------=>")
         showBooleanTypes()
         println("<=------------String-------------=>")
-        println("<=------------**********------------=>")
         showStringTypes()
+        //Literal Constants
+        LiteralConstants().showLiteralConstants()
+        //Representation
+        Representation().showRepresentationTripleEQUALS()
+        Representation().showRepresentationDoubleEQUALS()
+        //ExplicitConversion
+        ExplicitConversion().showExplicitConversionMethod()
         println("<=------------**********------------=>")
     }
 
