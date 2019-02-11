@@ -6,6 +6,7 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
 
     var mRefernceLink :String = "https://www.tutorialspoint.com/kotlin/kotlin_basic_types.htm"
+    var mDocReferenceLink :String = "https://kotlinlang.org/docs/reference/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,5 +25,6 @@ class MainActivity : AppCompatActivity() {
 
     fun showReferences(){
         println("App Reference Link:"+mRefernceLink)
+        println("Document Reference Link:"+mDocReferenceLink)
     }
 }
