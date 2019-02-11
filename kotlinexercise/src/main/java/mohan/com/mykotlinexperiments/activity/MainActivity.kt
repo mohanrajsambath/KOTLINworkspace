@@ -1,10 +1,12 @@
-package mohan.com.mykotlinexperiments
+package mohan.com.mykotlinexperiments.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import mohan.com.mykotlinexperiments.basictypes.BasicDataTypes
+import mohan.com.mykotlinexperiments.R
 
 class MainActivity : AppCompatActivity() {
-
+    var mAppName :String  = "\tExercise:"
     var mRefernceLink :String = "https://www.tutorialspoint.com/kotlin/kotlin_basic_types.htm"
     var mDocReferenceLink :String = "https://kotlinlang.org/docs/reference/"
 
@@ -16,8 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun AccessMyExps(){
-        BasicDataTypes().DataTypeRunMethods()
-        LiteralConstants().showLiteralConstants()
+        BasicDataTypes().DataTypeFunctions()
         showReferences()
         println("<=------------**********------------=>")
     }
