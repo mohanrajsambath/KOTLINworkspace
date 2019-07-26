@@ -4,7 +4,7 @@ import mohan.com.mykotlinexperiments.activity.MainActivity
 
 
 /*
- * Copyright (c) 2019. Created by Mohanraj.S,Innobot Systems on 11/2/19 for KOTLINworkspace
+ * Copyright (c) 2019. Created by Mohanraj.S,on 11/2/19 for KOTLINworkspace
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -21,11 +21,11 @@ class ExplicitConversion{
 
     /*Explicit Conversions
     Due to different representations, smaller types are not subtypes of bigger ones. If they were, we would have troubles of the following sort*/
-    var mAppName :String  = MainActivity().mAppName;
+    var mAppName: String = MainActivity().mAppName
     val mByte: Byte = 10
     val mHexa= 0xFF_EC//0xFF_EC_DE_5E
-    val mInt: Int =50;
-    val mShort: Short=40;
+    val mInt: Int = 50
+    val mShort: Short = 40
     val mLong: Long=10000000000L
     val mFloat: Float= 20.0f
     val mDouble: Double= 53000.505
