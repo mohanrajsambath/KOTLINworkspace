@@ -33,7 +33,7 @@ class LiteralConstants{
     Doubles by default: 123.5, 123.5e10
     Floats are tagged by f or F: 123.5f*/
 
-    var mAppName :String  = MainActivity().mAppName;
+    var mAppName: String = MainActivity().mAppName
     val oneMillion = 1_000_000
     val creditCardNumber = 1234_5678_9012_3456L
     val socialSecurityNumber = 999_99_9999L
