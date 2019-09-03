@@ -4,7 +4,7 @@ import mohan.com.mykotlinexperiments.activity.MainActivity
 
 
 /*
- * Copyright (c) 2019. Created by Mohanraj.S,Innobot Systems on 11/2/19 for KOTLINworkspace
+ * Copyright (c) 2019. Created by Mohanraj.S,on 11/2/19 for KOTLINworkspace
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -21,11 +21,11 @@ class ExplicitConversion{
 
     /*Explicit Conversions
     Due to different representations, smaller types are not subtypes of bigger ones. If they were, we would have troubles of the following sort*/
-    var mAppName :String  = MainActivity().mAppName;
+    var mAppName: String = MainActivity().mAppName
     val mByte: Byte = 10
     val mHexa= 0xFF_EC//0xFF_EC_DE_5E
-    val mInt: Int =50;
-    val mShort: Short=40;
+    val mInt: Int = 50
+    val mShort: Short = 40
     val mLong: Long=10000000000L
     val mFloat: Float= 20.0f
     val mDouble: Double= 53000.505
@@ -56,6 +56,7 @@ class ExplicitConversion{
         println(mAppName+" ExplicitConversion of Byte value of 'b' into Int 'i' val is="+i)
         showExplictByteConversion()
         showExplictIntConversion()
+        showExplictShortConversion()
     }
 
     fun showExplictByteConversion(){
@@ -66,11 +67,11 @@ class ExplicitConversion{
         val mFloatToByte =mFloat.toByte()
         val mDoubleToByte =mDouble.toByte()
 
-        println(mAppName+" ExplicitConversion of Int ($mInt) to Byte val is="+mIntToByte)
-        println(mAppName+" ExplicitConversion of Short ($mShort) to Byte val is="+mShortToByte)
-        println(mAppName+" ExplicitConversion of Long ($mLong) to Byte val is="+mLongToByte)
-        println(mAppName+" ExplicitConversion of Float ($mFloat) to Byte val is="+mFloatToByte)
-        println(mAppName+" ExplicitConversion of Double ($mDouble) to Byte val is="+mDoubleToByte)
+        println(mAppName + " ExplicitConversion of Int ($mInt) to Byte=" + mIntToByte)
+        println(mAppName + " ExplicitConversion of Short ($mShort) to Byte=" + mShortToByte)
+        println(mAppName + " ExplicitConversion of Long ($mLong) to Byte=" + mLongToByte)
+        println(mAppName + " ExplicitConversion of Float ($mFloat) to Byte=" + mFloatToByte)
+        println(mAppName + " ExplicitConversion of Double ($mDouble) to Byte=" + mDoubleToByte)
     }
 
     fun showExplictIntConversion(){
@@ -81,26 +82,26 @@ class ExplicitConversion{
         val mFloatToInt =mFloat.toInt()
         val mDoubleToInt =mDouble.toInt()
 
-        println(mAppName+" ExplicitConversion of HexaDec ($mHexa) to Int val is="+mHexaToInt)
-        println(mAppName+" ExplicitConversion of Short ($mShort) to Int val is="+mShortToInt)
-        println(mAppName+" ExplicitConversion of Long ($mLong) to Int val is="+mLongToInt)
-        println(mAppName+" ExplicitConversion of Float ($mFloat) to Int val is="+mFloatToInt)
-        println(mAppName+" ExplicitConversion of Double ($mDouble) to Int val is="+mDoubleToInt)
+        println(mAppName + " ExplicitConversion of HexaDec ($mHexa) to Int=" + mHexaToInt)
+        println(mAppName + " ExplicitConversion of Short ($mShort) to Int=" + mShortToInt)
+        println(mAppName + " ExplicitConversion of Long ($mLong) to Int=" + mLongToInt)
+        println(mAppName + " ExplicitConversion of Float ($mFloat) to Int=" + mFloatToInt)
+        println(mAppName + " ExplicitConversion of Double ($mDouble) to Int=" + mDoubleToInt)
     }
 
     fun showExplictShortConversion(){
-        println("<=------------ExplicitConversions into Int------------=>")
-        val mHexaToInt =mHexa.toInt()
-        val mShortToInt =mShort.toInt()
-        val mLongToInt =mLong.toInt()
-        val mFloatToInt =mFloat.toInt()
-        val mDoubleToInt =mDouble.toInt()
+        println("<=------------ExplicitConversions into Short------------=>")
+        val mHexaToShort = mHexa.toShort()
+        val mIntToShort = mInt.toShort()
+        val mLongToShort = mLong.toShort()
+        val mFloatToShort = mFloat.toShort()
+        val mDoubleToShort = mDouble.toShort()
 
-        println(mAppName+" ExplicitConversion of HexaDec ($mHexa) to Int val is="+mHexaToInt)
-        println(mAppName+" ExplicitConversion of Short ($mShort) to Int val is="+mShortToInt)
-        println(mAppName+" ExplicitConversion of Long ($mLong) to Int val is="+mLongToInt)
-        println(mAppName+" ExplicitConversion of Float ($mFloat) to Int val is="+mFloatToInt)
-        println(mAppName+" ExplicitConversion of Double ($mDouble) to Int val is="+mDoubleToInt)
+        println(mAppName + " ExplicitConversion of HexaDec ($mHexa) to Short =" + mHexaToShort)
+        println(mAppName + " ExplicitConversion of Short ($mShort) to Short=" + mIntToShort)
+        println(mAppName + " ExplicitConversion of Long ($mLong) to Short=" + mLongToShort)
+        println(mAppName + " ExplicitConversion of Float ($mFloat) to Short=" + mFloatToShort)
+        println(mAppName + " ExplicitConversion of Double ($mDouble) to Short=" + mDoubleToShort)
     }
 
 }

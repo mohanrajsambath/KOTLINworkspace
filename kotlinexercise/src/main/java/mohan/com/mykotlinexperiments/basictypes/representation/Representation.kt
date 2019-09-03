@@ -1,11 +1,10 @@
 package mohan.com.mykotlinexperiments.basictypes.representation
 
 import mohan.com.mykotlinexperiments.activity.MainActivity
-import mohan.com.mykotlinexperiments.basictypes.BasicDataTypes
 
 
 /*
- * Copyright (c) 2019. Created by Mohanraj.S,Innobot Systems on 11/2/19 for KOTLINworkspace
+ * Copyright (c) 2019. Created by Mohanraj.S,on 11/2/19 for KOTLINworkspace
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -25,7 +24,7 @@ class Representation{
     In the latter cases numbers are boxed.
     Note that boxing of numbers does not necessarily preserve identity*/
 
-    var mAppName :String  = MainActivity().mAppName;
+    var mAppName: String = MainActivity().mAppName
 
     fun showRepresentationTripleEQUALS(){
         println("<=------------Representation '==='------------=>")
