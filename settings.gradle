@@ -1,1 +1,1 @@
-include ':kotlinexercise', ':kotlinandroid'
+include ':kotlinexercise', ':kotlinandroid', ':kotexoplayer'

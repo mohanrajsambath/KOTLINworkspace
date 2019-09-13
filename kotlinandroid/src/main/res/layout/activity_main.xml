@@ -136,6 +136,8 @@
                 android:id="@+id/ll_main_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
             <!--<TextView
@@ -147,9 +149,17 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="\u25A1 https://kotlinlang.org/docs/reference/basic-syntax.html"
+                    android:textSize="8sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/this_is_symbols"
                     android:textSize="13sp"
-                    />
+                    android:layout_marginTop="16dp"/>
 
             <TextView
                     android:layout_width="wrap_content"
@@ -261,6 +271,107 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/if_can_also_be_used_as_an_conditional_expression"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u25BA Nullable values and null checks"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                    android:id="@+id/txtVw_null_checks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nullable_values_and_null_checks"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:id="@+id/txtVw_returning_nullable_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/use_a_function_returning_nullable_value"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u25BA Type checks and automatic casts"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                    android:id="@+id/txtVw_typecasting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/the_is_operator_checks_if_an_expression_is_an_instance_of_a_type"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u25BA Loop Expression"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                    android:id="@+id/txtVw_forLoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_loop"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:id="@+id/txtVw_whileLoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/while_loop"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u25BA When Expression"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                    android:id="@+id/txtVw_whenExpression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/when_conditional_statement"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u25BA Range in Conditional Statement"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                    android:id="@+id/txtVw_rangein_IF_Condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/range_in_if_statement"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:id="@+id/txtVw_rangein_IF_Condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/range_in_if_statement"
                     android:textSize="13sp"
                     android:layout_marginTop="8dp"/>
 

@@ -38,6 +38,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     var txtVw_string_template: TextView?=null
     var txtVw_conditional_expression: TextView?=null
     var txtVw_if_also_an_conditional_expression: TextView?=null
+    var txtVw_null_checks: TextView?=null
+    var txtVw_returning_nullable_value: TextView?=null
+    var txtVw_typecasting: TextView?=null
+    var txtVw_forLoop: TextView?=null
+    var txtVw_whileLoop: TextView?=null
+    var txtVw_whenExpression: TextView?=null
+    var txtVw_rangein_IF_Condition: TextView?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,6 +91,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         txtVw_if_also_an_conditional_expression= findViewById(R.id.txtVw_if_also_an_conditional_expression)
         txtVw_if_also_an_conditional_expression!!.setOnClickListener(this)
 
+        txtVw_null_checks= findViewById(R.id.txtVw_null_checks)
+        txtVw_null_checks!!.setOnClickListener(this)
+
+        txtVw_returning_nullable_value= findViewById(R.id.txtVw_returning_nullable_value)
+        txtVw_returning_nullable_value!!.setOnClickListener(this)
+
+        txtVw_typecasting= findViewById(R.id.txtVw_typecasting)
+        txtVw_typecasting!!.setOnClickListener(this)
+
+        txtVw_forLoop= findViewById(R.id.txtVw_forLoop)
+        txtVw_forLoop!!.setOnClickListener(this)
+
+        txtVw_whileLoop= findViewById(R.id.txtVw_whileLoop)
+        txtVw_whileLoop!!.setOnClickListener(this)
+
+        txtVw_whenExpression= findViewById(R.id.txtVw_whenExpression)
+        txtVw_whenExpression!!.setOnClickListener(this)
+
+        txtVw_rangein_IF_Condition= findViewById(R.id.txtVw_rangein_IF_Condition)
+        txtVw_rangein_IF_Condition!!.setOnClickListener(this)
+
         //Dynamic Textview
         /*val mDynamicTxtView= TextView(this)
         mDynamicTxtView.textSize=10.5f
@@ -92,6 +120,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         ll_main_layout.addView(mDynamicTxtView)*/
 
 
+    }
+
+    fun customSnackBar(hintMsg:String,valueStr:String){
+        val popupMsg:Snackbar
+        if(valueStr.length>0){
+            popupMsg = Snackbar.make(root_layout,hintMsg+valueStr,Snackbar.LENGTH_SHORT)
+        }else{
+            popupMsg = Snackbar.make(root_layout,hintMsg,Snackbar.LENGTH_SHORT)
+        }
+        popupMsg.show()
+        /*val snack = Snackbar.make(root_layout,hintMsg+valueStr,Snackbar.LENGTH_SHORT)
+        snack.show()*/
     }
 
     override fun onClick(v: View?) {
@@ -174,22 +214,49 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 customSnackBar("If also an Conditional Expressions =", maxOfValue.toString())
             }
 
+            R.id.txtVw_null_checks->{
+                val aa=parseInt("")
+                customSnackBar("Null Check-", aa.toString())
+            }
 
+            R.id.txtVw_returning_nullable_value->{
+                returnNullable1("!@#$","*&^&")
+                customSnackBar("Use a function returning nullable value =", "")
+            }
 
+            R.id.txtVw_typecasting->{
+                val mStringLen1=getStringLength1("Mohan")
+                val mStringLen2=getStringLength2("GaneshKumar")
+                val mStringLen3=getStringLength3("Dhayalan")
+                customSnackBar("Type Casting Function from String- ", "1st-String="+mStringLen1.toString()+", 2nd-String="+mStringLen2.toString()+", 3rd-String="+mStringLen3.toString())
+            }
+
+            R.id.txtVw_forLoop->{
+                forLoop()
+                customSnackBar("ForLoop","")
+            }
+
+            R.id.txtVw_whileLoop->{
+                whileLoop()
+                customSnackBar("WhileLoop","")
+            }
+
+            R.id.txtVw_whenExpression->{
+                //val returnValueofWhen= describeWhenExpression(1)
+                //val returnValueofWhen= describeWhenExpression("Hello")
+                //val returnValueofWhen= describeWhenExpression(100000000000000)
+                //val returnValueofWhen= describeWhenExpression(Int)
+                val returnValueofWhen= describeWhenExpression(0.0)
+                customSnackBar("When Expression =",returnValueofWhen)
+            }
+            R.id.txtVw_rangein_IF_Condition->{
+                val returnValueofRange=rangeinConditionalStatement(10,9)
+                customSnackBar("When Expression =", returnValueofRange.toString())
+            }
         }
     }
 
-    fun customSnackBar(hintMsg:String,valueStr:String){
-        val popupMsg:Snackbar
-        if(valueStr.length>0){
-            popupMsg = Snackbar.make(root_layout,hintMsg+valueStr,Snackbar.LENGTH_SHORT)
-        }else{
-            popupMsg = Snackbar.make(root_layout,hintMsg,Snackbar.LENGTH_SHORT)
-        }
-        popupMsg.show()
-        /*val snack = Snackbar.make(root_layout,hintMsg+valueStr,Snackbar.LENGTH_SHORT)
-        snack.show()*/
-    }
+
 
     //function with 2 argument and integer return type
     fun sum(a: Int, b: Int): Int {
@@ -267,4 +334,131 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     //if can also be used as an expression
     fun ifExpressionMaxOf(a: Int, b: Int) = if (a > b) a else b
 
+    /*A reference must be explicitly marked as nullable when null value is possible.
+    Return null if str does not hold an integer:*/
+    fun parseInt(str: String): Int? {
+        val a:Int =10
+        println(" String Template s1 values is $str")
+        return a
+    }
+
+    /*Use a function returning nullable value:*/
+    fun returnNullable1(arg1: String, arg2: String) {
+        val x = parseInt(arg1)
+        val y = parseInt(arg2)
+
+        // Using `x * y` yields error because they may hold nulls.
+        if (x != null && y != null) {
+            // x and y are automatically cast to non-nullable after null check
+            println(x * y)
+        }
+        else {
+            println("'$arg1' or '$arg2' is not a number")
+        }
+        returnNullable2(arg1,arg2)
+    }
+
+    fun returnNullable2(arg1: String, arg2: String){
+        val x = parseInt(arg1)
+        val y = parseInt(arg2)
+        if (x == null) {
+            println("Wrong number format in arg1: '$arg1'")
+            return
+        }
+        if (y == null) {
+            println("Wrong number format in arg2: '$arg2'")
+            return
+        }
+        // x and y are automatically cast to non-nullable after null check
+        println(x * y)
+    }
+
+    /*Type checks and automatic casts
+    The is operator checks if an expression is an instance of a type.
+    If an immutable local variable or property is checked for a specific type,
+    there's no need to cast it explicitly:*/
+
+    fun getStringLength1(obj: Any): Int? {
+        if (obj is String) {
+            // `obj` is automatically cast to `String` in this branch
+            return obj.length
+        }
+        // `obj` is still of type `Any` outside of the type-checked branch
+        return null
+    }
+
+    fun getStringLength2(obj: Any): Int? {
+        if (obj !is String) return null
+        // `obj` is automatically cast to `String` in this branch
+        return obj.length
+    }
+
+    fun getStringLength3(obj: Any): Int? {
+        // `obj` is automatically cast to `String` on the right-hand side of `&&`
+        if (obj is String && obj.length > 0) {
+            return obj.length
+        }
+        return null
+    }
+
+    //forLoop expression
+    fun forLoop(){
+        val items = listOf("apple", "banana", "kiwifruit")
+        //expression-1
+        for (item in items) {
+            println("Looping Items in List--=>"+item)
+        }
+        //expression-2
+        for (index in items.indices) {
+            println("Looping item at $index is ${items[index]}")
+        }
+    }
+
+    //WhileLoop Expression
+    fun whileLoop(){
+        val indianBioDivereseList = listOf("Achanakmar-Amarkantak",
+            "Agasthyamalai",
+            "Dibru Saikhowa",
+            "Dihang Dibang",
+            "Great Nicobar",
+            "Gulf of Mannar",
+            "Kachchh",
+            "Khangchendzonga",
+            "Manas","Nanda Devi",
+            "The Nilgiris",
+            "Nokrek",
+            "Pachmarhi",
+            "Simlipal",
+            "Sundarbans",
+            "Cold Desert",
+            "Seshachalam hills",
+            "Panna")
+
+        var index = 0
+        while (index < indianBioDivereseList.size) {
+            println("While Looping item at $index is ${indianBioDivereseList[index]}")
+            index++
+        }
+    }
+
+    //When Conditional Statement
+    fun describeWhenExpression(obj: Any): String =
+        when (obj) {
+            1          -> {"One"}
+            "Hello"    -> {"Greeting"}
+            is Long    -> {"Long"}
+            !is String -> {"Not a string"}
+            else       -> {"Unknown"}
+        }
+
+    /*Ranges
+    Check if a number is within a range using in operator:*/
+    fun rangeinConditionalStatement(x:Int,y:Int){
+        if(x in 1..y+1){
+            println("fits in range")
+        }
+
+    }
 }
+
+

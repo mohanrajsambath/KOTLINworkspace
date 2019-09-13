@@ -14,4 +14,12 @@
     <string name="string_templates">\u25AA String Templates</string>
     <string name="conditional_expressions">\u25AA Conditional expressions</string>
     <string name="if_can_also_be_used_as_an_conditional_expression">\u25AA if can also be used as an conditional expression</string>
+    <string name="nullable_values_and_null_checks">\u25AA Nullable values and null checks</string>
+    <string name="use_a_function_returning_nullable_value">\u25AA Use a function returning nullable value</string>
+    <string name="the_is_operator_checks_if_an_expression_is_an_instance_of_a_type">\u25AA The \'is\' operator checks if an expression is an instance of a type.</string>
+    <string name="for_loop">\u25AA For Loop</string>
+    <string name="while_loop">\u25AA While Loop</string>
+    <string name="when_conditional_statement">\u25AA When Conditional Statement</string>
+    <string name="range_in_if_statement">Check if a number is within a range using in operator</string>
+
 </resources>
