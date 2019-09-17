@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">KotlinAndroid</string>
+    <string name="this_is_a_textview_generated_from_xml">This is a textview generated from xml</string>
+    <string name="this_is_symbols">\u2022,\u25CF,\u25CB,\u25AA,\u25A0,\u25A1,\u25BA </string>
+
+    <string name="program_entrypoint">\u25A0 Program EntryPoint</string>
+    <string name="function_with_2_integer_variable_arg_and_return_type">\u25AA Function with 2 Integer variable arg and return type</string>
+    <string name="function_with_an_expression_body_and_inferred_return_type">\u25AA Function with an expression body and inferred return type</string>
+    <string name="function_returning_no_meaningful_value">\u25AA Function returning no meaningful value</string>
+    <string name="function_returning_no_meaningful_value_omit_units">\u25AA Function returning no meaningful value &amp; omit Units</string>
+    <string name="readonly_variables_using_val"><![CDATA[▪ ReadOnly Variables using \'Val\']]></string>
+    <string name="read_write_variables_using_var"><![CDATA[▪ Read & Write Variables using \'Var\']]></string>
+    <string name="read_write_toplevel_variables_using_var"><![CDATA[▪ Read & Write TopLevel Variables using \'Var\']]></string>
+    <string name="string_templates">\u25AA String Templates</string>
+    <string name="conditional_expressions">\u25AA Conditional expressions</string>
+    <string name="if_can_also_be_used_as_an_conditional_expression">\u25AA if can also be used as an conditional expression</string>
+    <string name="nullable_values_and_null_checks">\u25AA Nullable values and null checks</string>
+    <string name="use_a_function_returning_nullable_value">\u25AA Use a function returning nullable value</string>
+    <string name="the_is_operator_checks_if_an_expression_is_an_instance_of_a_type">\u25AA The \'is\' operator checks if an expression is an instance of a type.</string>
+    <string name="for_loop">\u25AA For Loop</string>
+    <string name="while_loop">\u25AA While Loop</string>
+    <string name="when_conditional_statement">\u25AA When Conditional Statement</string>
+    <string name="range_in_if_statement">Check if a number is within a range using in operator</string>
+
+</resources>
