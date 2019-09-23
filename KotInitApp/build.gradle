@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.myapplication"
-        minSdkVersion 26
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -33,4 +33,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.agrawalsuneet.androidlibs:loaderspack:1.2.3'
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
 }
