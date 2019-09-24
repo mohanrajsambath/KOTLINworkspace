@@ -1,4 +1,4 @@
-package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.constructoroverloading
+package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.callingsuperclass
 
 
 /*
@@ -15,20 +15,20 @@ package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.construc
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class ClassesConstructorOverLoading {
-
-    init{
-        println("<=---ConstructorOverLoading---=>")
-        findAreaofShapes()
-        println("<=---          ###         ---=>")
+ class SubClsFilledRectangle:SprClsRectangle() {
+    override fun draw() {
+        super.draw()
+        println("---=>SubClsFilledRectangle Filling the rectangle in ")
     }
 
-    fun findAreaofShapes(){
-        CircleShape(2.0).areaOfCircle()
-        RectShape(3.0,4.0).areaOfRectangle()
-        SquareShape(5.0).areaofSquare()
 
-        TriangleShape(3.0,4.0,3.0).areaofTrinagle()
-        TriangleShape(5.0,15.0).areaofTrianglebyBH()
+/*inherit the property*/
+    val fillColor: String get()=super.borderColor
+    init {
+        draw()
+        println("---=>SubClsFilledRectangle fillColor$fillColor")
     }
+
+
+
 }
