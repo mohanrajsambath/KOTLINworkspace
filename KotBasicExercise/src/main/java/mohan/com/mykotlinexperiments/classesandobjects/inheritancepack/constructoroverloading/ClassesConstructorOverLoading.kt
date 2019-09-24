@@ -15,17 +15,19 @@ package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.construc
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class RectShape {
-    var mLength:Double = 0.0
-    var mWidth:Double=0.0
-    constructor(length:Double,width:Double){
-        mLength=length
-        mWidth=width
+class ClassesConstructorOverLoading {
+
+    init{
+        println("<=---ConstructorOverLoading---=>")
+        findAreaofShapes()
+        println("<=---          ###         ---=>")
     }
 
-    fun areaOfRectangle(){
-        val area=mLength*mWidth
-        println("Area of MyOverridingProperty---=>$area")
+    fun findAreaofShapes(){
+        CircleShape(2.0).areaOfCircle()
+        RectShape(3.0,4.0).areaOfRectangle()
+        SquareShape(5.0).areaofSquare()
+        TriangleShape(3.0,4.0,3.0).areaofTrinagle()
+        TriangleShape(5.0,15.0).areaofTrianglebyBH()
     }
-
 }

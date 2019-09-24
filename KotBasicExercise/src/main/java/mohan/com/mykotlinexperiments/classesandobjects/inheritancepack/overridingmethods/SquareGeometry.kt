@@ -1,4 +1,4 @@
-package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.constructoroverloading
+package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.overridingmethods
 
 
 /*
@@ -15,17 +15,23 @@ package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.construc
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class AreaofShapes {
+class SquareGeometry(side:Double):Geometry() {
+    var mSide:Double=side
 
-    init{
-        findAreaofShapes()
+    init {
+        findArea()
+        findPerimeter()
     }
 
-    fun findAreaofShapes(){
-        CircleShape(2.0).areaOfCircle()
-        RectShape(3.0,4.0).areaOfRectangle()
-        SquareShape(5.0).areaofSquare()
-        TriangleShape(3.0,4.0,3.0).areaofTrinagle()
-        TriangleShape(5.0,15.0).areaofTrianglebyBH()
+    override fun findArea() {
+        //super.findArea()
+        val area=mSide*mSide
+        println("Area of Square---=>$area")
+    }
+
+    override fun findPerimeter() {
+        //super.findPerimeter()
+        val perimeter=4*mSide
+        println("Perimeter of Square---=>$perimeter")
     }
 }

@@ -1,4 +1,4 @@
-package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.constructoroverloading
+package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.overridingmethods
 
 
 /*
@@ -15,17 +15,23 @@ package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.construc
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class RectShape {
-    var mLength:Double = 0.0
-    var mWidth:Double=0.0
-    constructor(length:Double,width:Double){
-        mLength=length
-        mWidth=width
+class RectangleGeometry(length:Double,width:Double):Geometry() {
+    var mLength:Double = length
+    var mWidth:Double=width
+    init {
+        findArea()
+        findPerimeter()
     }
 
-    fun areaOfRectangle(){
+    override fun findArea() {
+        //super.findArea()
         val area=mLength*mWidth
         println("Area of MyOverridingProperty---=>$area")
     }
 
+    override fun findPerimeter() {
+        //super.findPerimeter()
+        val perimeter=2*(mLength+mWidth)
+        println("Perimeter of MyOverridingProperty---=>$perimeter")
+    }
 }

@@ -7,9 +7,10 @@ import mohan.com.mykotlinexperiments.basictypes.BasicDataTypes
 import mohan.com.mykotlinexperiments.classesandobjects.basicexclasses.Consturctors
 import mohan.com.mykotlinexperiments.classesandobjects.basicexclasses.Customer
 import mohan.com.mykotlinexperiments.classesandobjects.basicexclasses.PrimaryConstructorDemo
-import mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.constructoroverloading.AreaofShapes
+import mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.constructoroverloading.ClassesConstructorOverLoading
 import mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.derivednoprimaryconstructor.MyCustomView
 import mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.multilevel.ChildClass
+import mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.overridingmethods.ClassesOverridingMethods
 
 class MainActivity : AppCompatActivity() {
     var mAppName :String  = "\tExercise:"
@@ -22,7 +23,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //AccessBasicClasses()
         //goMultiLevelInheritance()
-        goConstructorOverLoading()
+        //goConstructorOverLoading()
+        goOverridingMethods()
 
     }
 
@@ -47,8 +49,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goConstructorOverLoading(){
+        /*ConstructorOverLoading*/
+        /*Primary and Secondary Constructors are Used*/
+        ClassesConstructorOverLoading()
+    }
+
+    fun goOverridingMethods(){
         /*Overriding Methods*/
-        AreaofShapes()
+        ClassesOverridingMethods()
     }
 
 

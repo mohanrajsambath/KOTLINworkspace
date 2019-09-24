@@ -1,4 +1,4 @@
-package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.constructoroverloading
+package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.overridingproperties
 
 
 /*
@@ -15,17 +15,8 @@ package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.construc
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class RectShape {
-    var mLength:Double = 0.0
-    var mWidth:Double=0.0
-    constructor(length:Double,width:Double){
-        mLength=length
-        mWidth=width
-    }
-
-    fun areaOfRectangle(){
-        val area=mLength*mWidth
-        println("Area of MyOverridingProperty---=>$area")
-    }
-
+open class RectProperties {
+    open val prop0:Double=30.0
+    open val prop1:Double = 50.0
+    open var prop2:Double = 70.0
 }
