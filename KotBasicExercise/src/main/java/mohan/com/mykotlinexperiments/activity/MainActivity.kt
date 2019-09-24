@@ -7,6 +7,8 @@ import mohan.com.mykotlinexperiments.basictypes.BasicDataTypes
 import mohan.com.mykotlinexperiments.classesandobjects.basicexclasses.Consturctors
 import mohan.com.mykotlinexperiments.classesandobjects.basicexclasses.Customer
 import mohan.com.mykotlinexperiments.classesandobjects.basicexclasses.PrimaryConstructorDemo
+import mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.constructoroverloading.AreaofShapes
+import mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.derivednoprimaryconstructor.MyCustomView
 import mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.multilevel.ChildClass
 
 class MainActivity : AppCompatActivity() {
@@ -18,8 +20,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        AccessBasicClasses()
-        goMultiLevelInheritance()
+        //AccessBasicClasses()
+        //goMultiLevelInheritance()
+        goConstructorOverLoading()
 
     }
 
@@ -38,6 +41,14 @@ class MainActivity : AppCompatActivity() {
        //GranParentClass(50)
        //ParentClass(100)
         ChildClass(150)
+        MyCustomView(applicationContext)
+
+
+    }
+
+    fun goConstructorOverLoading(){
+        /*Overriding Methods*/
+        AreaofShapes()
     }
 
 
