@@ -37,18 +37,21 @@ class MyOverridingProperty:RectProperties() {
         set(value) {
             println(value)
         }*/
-override var prop0:Double = super.prop0+1.0
-override var prop1:Double = super.prop1+1.0
-override var prop2:Double = super.prop2+1.0
+    override var prop0:Double = super.prop0+1.0
+    override var prop1:Double = super.prop1+1.0
+    override var prop2:Double = super.prop2+1.0
 
-init {
-    PassOverridePropertyValues()
-}
-fun PassOverridePropertyValues(){
-    CircleGeometry(prop0)
-    RectangleGeometry(prop0,prop1)
-    SquareGeometry(prop0)
-    TriangleGeometry(prop0,prop1,prop2)
-}
+    init {
+        PassOverridePropertyValues()
+        MyRectangleClass()
+        MyPolygonClass()
+    }
+
+    fun PassOverridePropertyValues(){
+        CircleGeometry(prop0)
+        RectangleGeometry(prop0,prop1)
+        SquareGeometry(prop0)
+        TriangleGeometry(prop0,prop1,prop2)
+    }
 
 }

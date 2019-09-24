@@ -10,4 +10,7 @@ open class Geometry {
 
     open fun justPrint() { println("---=>Geometry JustPrint method executed") }
 
+    /*open fun addition(){}
+    open fun multiplication(){}*/
+
 }

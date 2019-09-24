@@ -18,6 +18,7 @@ package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.multilev
 open class ParentClass(i:Int):
     GranParentClass(i) {
     val mVarInt1=i.also(::println)
+
     init{
         baseDoSum(mVarInt)
         deriveDoMul(mVarInt1)

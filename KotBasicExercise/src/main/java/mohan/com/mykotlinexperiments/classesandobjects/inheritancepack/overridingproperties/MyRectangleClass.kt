@@ -1,4 +1,4 @@
-package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.constructoroverloading
+package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.overridingproperties
 
 
 /*
@@ -15,20 +15,11 @@ package mohan.com.mykotlinexperiments.classesandobjects.inheritancepack.construc
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class ClassesConstructorOverLoading {
+class MyRectangleClass(override val vertexCount:Int =4, override var mPolyVertex: Int=5):InterfaceShape
+{
+init{
+    println("MyRectangleClass Vertex Count---=>$vertexCount")
+    println("MyRectangleClass PolyVertex Count---=>$mPolyVertex")
+}
 
-    init{
-        println("<=---ConstructorOverLoading---=>")
-        findAreaofShapes()
-        println("<=---          ###         ---=>")
-    }
-
-    fun findAreaofShapes(){
-        CircleShape(2.0).areaOfCircle()
-        RectShape(3.0,4.0).areaOfRectangle()
-        SquareShape(5.0).areaofSquare()
-
-        TriangleShape(3.0,4.0,3.0).areaofTrinagle()
-        TriangleShape(5.0,15.0).areaofTrianglebyBH()
-    }
 }
