@@ -1,1 +1,1 @@
-include ':KotBasicExercise', ':KotBasicAndroid', ':KotExoplayer', ':KotJavaInteractions', ':KotInitApp', ':KotMvvm'
+include ':KotBasicExercise', ':KotBasicAndroid', ':KotExoplayer', ':KotJavaInteractions', ':KotInitApp'
