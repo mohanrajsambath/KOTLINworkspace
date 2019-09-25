@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "mohan.com.kotexoplayer"
+        applicationId "com.kotexoplayer"
         minSdkVersion 25
         targetSdkVersion 28
         versionCode 1

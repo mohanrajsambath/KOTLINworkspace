@@ -13,7 +13,6 @@
             <option value="$PROJECT_DIR$/KotExoplayer" />
             <option value="$PROJECT_DIR$/KotInitApp" />
             <option value="$PROJECT_DIR$/KotJavaInteractions" />
-            <option value="$PROJECT_DIR$/KotMvvm" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
