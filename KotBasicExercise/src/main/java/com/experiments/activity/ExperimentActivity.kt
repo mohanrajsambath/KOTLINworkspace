@@ -7,10 +7,10 @@ import com.experiments.basictypes.BasicDataTypes
 import com.experiments.classesandobjects.basicexclasses.Consturctors
 import com.experiments.classesandobjects.basicexclasses.Customer
 import com.experiments.classesandobjects.basicexclasses.PrimaryConstructorDemo
-import com.experiments.classesandobjects.inheritancepack.constructoroverloading.ClassesConstructorOverLoading
-import com.experiments.classesandobjects.inheritancepack.derivednoprimaryconstructor.MyCustomView
-import com.experiments.classesandobjects.inheritancepack.multilevel.ChildClass
-import com.experiments.classesandobjects.inheritancepack.overridingmethods.ClassesOverridingMethods
+import com.experiments.classesandobjects.myinheritance.constructoroverloading.ClassesConstructorOverLoading
+import com.experiments.classesandobjects.myinheritance.derivednoprimaryconstructor.MyCustomView
+import com.experiments.classesandobjects.myinheritance.multilevel.ChildClass
+import com.experiments.classesandobjects.myinheritance.overridingmethods.ClassesOverridingMethods
 
 class ExperimentActivity : AppCompatActivity() {
     var mAppName :String  = "\tExercise:"
