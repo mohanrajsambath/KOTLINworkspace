@@ -20,11 +20,11 @@ package com.experiments.classesandobjects.myinheritance.abstractclass
         val car = Car("Ferrari 812 Superfast", "red", 1525.0, 339.60)
         val bike= Bike("Ducati 1098s", "red", 173.0, 271.0)
 
-        /*Display methods is written in Parent Class(SuperClass) */
+        /*Display methods is written in GrandParentClass(SuperClass) of this Class*/
         car.displayDetails()
         bike.displayDetails()
 
-        /*start method written in ChildClass(SubClass)*/
+        /*start method written in ParentClass(SubClass) of this class*/
         car.start()
         bike.start()
 

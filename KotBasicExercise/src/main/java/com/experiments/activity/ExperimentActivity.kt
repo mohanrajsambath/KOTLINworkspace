@@ -11,6 +11,7 @@ import com.experiments.classesandobjects.myinheritance.constructoroverloading.Cl
 import com.experiments.classesandobjects.myinheritance.derivednoprimaryconstructor.MyCustomView
 import com.experiments.classesandobjects.myinheritance.multilevel.ChildClass
 import com.experiments.classesandobjects.myinheritance.overridingmethods.ClassesOverridingMethods
+import com.experiments.propertiesandfields.FieldsAndProperties
 
 class ExperimentActivity : AppCompatActivity() {
     var mAppName :String  = "\tExercise:"
@@ -24,7 +25,8 @@ class ExperimentActivity : AppCompatActivity() {
         //AccessBasicClasses()
         //goMultiLevelInheritance()
         //goConstructorOverLoading()
-        goOverridingMethods()
+        //goOverridingMethods()
+        goPropertiesandFields()
 
     }
 
@@ -58,6 +60,12 @@ class ExperimentActivity : AppCompatActivity() {
     fun goOverridingMethods(){
         /*Overriding Methods*/
         ClassesOverridingMethods()
+    }
+
+
+    fun goPropertiesandFields(){
+        /*Properties(Variables) & Fields*/
+        FieldsAndProperties()
     }
 
 

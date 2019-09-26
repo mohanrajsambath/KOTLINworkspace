@@ -1,4 +1,4 @@
-package com.experiments.classesandobjects.myinheritance.abstractclass
+package com.experiments.propertiesandfields.getterandsetters
 
 
 /*
@@ -15,15 +15,9 @@ package com.experiments.classesandobjects.myinheritance.abstractclass
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class Bike(name:String,color:String,weight:Double,override var maxSpeed:Double):VehicleAbstractClass(name,color,weight) {
-
-    override fun start() {
-        println("---=>Bike Started")
-    }
-
-    override fun stop() {
-        println("---=>Bike Stopped")
-    }
-
-
+class Company {
+    var employeename:String=""
+    var age:Int=0
+    var phone:Long=0
+    var department:String=""
 }
