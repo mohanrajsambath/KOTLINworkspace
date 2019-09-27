@@ -7,11 +7,12 @@ import com.experiments.basictypes.BasicDataTypes
 import com.experiments.classesandobjects.basicexclasses.Consturctors
 import com.experiments.classesandobjects.basicexclasses.Customer
 import com.experiments.classesandobjects.basicexclasses.PrimaryConstructorDemo
+import com.experiments.classesandobjects.interfaces.ExpInterfaces
 import com.experiments.classesandobjects.myinheritance.constructoroverloading.ClassesConstructorOverLoading
 import com.experiments.classesandobjects.myinheritance.derivednoprimaryconstructor.MyCustomView
 import com.experiments.classesandobjects.myinheritance.multilevel.ChildClass
 import com.experiments.classesandobjects.myinheritance.overridingmethods.ClassesOverridingMethods
-import com.experiments.propertiesandfields.FieldsAndProperties
+import com.experiments.classesandobjects.propertiesandfields.FieldsAndProperties
 
 class ExperimentActivity : AppCompatActivity() {
     var mAppName :String  = "\tExercise:"
@@ -26,7 +27,8 @@ class ExperimentActivity : AppCompatActivity() {
         //goMultiLevelInheritance()
         //goConstructorOverLoading()
         //goOverridingMethods()
-        goPropertiesandFields()
+        //goPropertiesandFields()
+        goInterfaces()
 
     }
 
@@ -66,6 +68,11 @@ class ExperimentActivity : AppCompatActivity() {
     fun goPropertiesandFields(){
         /*Properties(Variables) & Fields*/
         FieldsAndProperties()
+    }
+
+
+    fun goInterfaces(){
+        ExpInterfaces()
     }
 
 
