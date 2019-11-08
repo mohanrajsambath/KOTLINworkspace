@@ -28,6 +28,33 @@ android {
         enabled = true
     }
 
+    android.buildTypes {
+        debug{
+            resValue "string", "BASE_URL", "https://api.simplifiedcoding.in/course-apis/mvvm/"
+        }
+        rc{}
+        release{}
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            buildConfigField "String", "BASE_URL", DEBUG_BASE_URL
+        }
+        internal {
+            applicationIdSuffix ".test"
+            buildConfigField "String", "BASE_URL", INTERNAL_BASE_URL
+        }
+        staging {
+            applicationIdSuffix ".staging"
+            buildConfigField "String", "BASE_URL", STAGING_BASE_URL
+        }
+        release {
+            buildConfigField "String", "BASE_URL", BASE_URL
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
 }
 
 dependencies {
@@ -40,25 +67,32 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    //Retrofit and GSON
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
 
+    //Kotlin Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2'
 
+    //ViewModel and LiveData
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
 
-    implementation 'com.google.android.material:material:1.1.0-alpha10'
+    //New Material Design
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
 
+    //Kodein Dependency Injection
     implementation 'org.kodein.di:kodein-di-generic-jvm:6.2.1'
     implementation 'org.kodein.di:kodein-di-framework-android-x:6.2.1'
 
-    implementation 'androidx.room:room-runtime:2.2.0-rc01'
-    implementation 'androidx.room:room-ktx:2.2.0-rc01'
-    kapt 'androidx.room:room-compiler:2.2.0-rc01'
+    //Android Room
+    implementation 'androidx.room:room-runtime:2.2.1'
+    implementation 'androidx.room:room-ktx:2.2.1'
+    kapt 'androidx.room:room-compiler:2.2.1'
 
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.0-alpha03'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.2.0-alpha03'
+    //Android Navigation Architecture
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.0-rc01'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.2.0-rc01'
 
     implementation 'com.xwray:groupie:2.3.0'
     implementation 'com.xwray:groupie-kotlin-android-extensions:2.3.0'
@@ -66,3 +100,19 @@ dependencies {
 
     implementation "androidx.preference:preference-ktx:1.1.0"
 }
+
+/*Reference Url*/
+/*
+1-https://www.simplifiedcoding.net/android-mvvm-tutorial/#Android-MVVM-Tutorial-8211-Source-Code
+2-https://www.youtube.com/watch?v=67bdklHmXA8&list=PLk7v1Z2rk4hjVaZ8DZKe8iT9RIM9OUrwp&index=1
+3-https://www.youtube.com/watch?v=1GBCg70G7cI&list=PLk7v1Z2rk4hjVaZ8DZKe8iT9RIM9OUrwp&index=2
+4-https://www.youtube.com/watch?v=1GBCg70G7cI&list=PLk7v1Z2rk4hjVaZ8DZKe8iT9RIM9OUrwp&index=3
+5-https://www.youtube.com/watch?v=1GBCg70G7cI&list=PLk7v1Z2rk4hjVaZ8DZKe8iT9RIM9OUrwp&index=4
+6-https://www.youtube.com/watch?v=spkIB6GkO1s&list=PLk7v1Z2rk4hjVaZ8DZKe8iT9RIM9OUrwp&index=5
+*/
+/*other references*/
+/*1- https://medium.com/@rafamatias/gradle-android-build-variables-done-right-d0c0e296ee93
+  2- https://github.com/rafamatias/android-boilerplate
+  3-https://medium.com/@ramonrabello/best-practices-for-working-with-different-build-types-c5cd08b1adc6
+*/
+

@@ -72,7 +72,7 @@
                     android:layout_height="wrap_content">
 
                 <EditText
-                        android:hint="Belal Khan"
+                        android:hint="Test User"
                         android:inputType="text"
                         android:text="@={viewmodel_signup.name}"
                         android:drawablePadding="16dp"
@@ -84,7 +84,7 @@
                         android:layout_height="match_parent"/>
 
                 <EditText
-                        android:hint="belal@gmail.com"
+                        android:hint="test@gmail.com"
                         android:inputType="textEmailAddress"
                         android:drawablePadding="16dp"
                         android:text="@={viewmodel_signup.email}"
