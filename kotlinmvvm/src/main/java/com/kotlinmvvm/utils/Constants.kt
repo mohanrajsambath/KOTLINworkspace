@@ -1,10 +1,8 @@
-package com.kotlinmvvm.ui.auth
-
-import androidx.lifecycle.LiveData
+package com.kotlinmvvm.utils
 
 
 /*
- * Copyright (c) 2019. Created by Mohanraj.S,Innobot Systems on 27/9/19 for KOTLINworkspace
+ * Copyright (c) 2019. Created by Mohanraj.S,Innobot Systems on 8/11/19 for KOTLINworkspace
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -17,8 +15,6 @@ import androidx.lifecycle.LiveData
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-interface AuthListener {
-    fun onStarted()
-    fun onSuccess(mLoginResponse: LiveData<String>)
-    fun onFailure(message:String)
+class Constants {
+
 }

@@ -2,6 +2,7 @@ package com.kotlinmvvm.ui.auth
 
 import android.view.View
 import androidx.lifecycle.ViewModel
+import com.kotlinmvvm.data.repositories.UserRepository
 
 
 /*
@@ -32,7 +33,13 @@ class AuthViewModel :ViewModel(){
             return
         }
         //success
-        authListener?.onSuccess()
+        //authListener?.onSuccess()
+        //Invoke Api
+        /*We should not create other class instance object, It resulting tight coupling*/
+        /*Here UserRepository class is dependent to MyApi class, To avoid this will goto dependency injection*/
+        /*As of now i will leave this for intial step of MVVM implementation, later it will move to dependency injection basis*/
+        val mLoginResponse=UserRepository().userLogin(email!!,password!!)
+       authListener?.onSuccess(mLoginResponse)
     }
 
     fun onSignupButtonClick(view:View){
