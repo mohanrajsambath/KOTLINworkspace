@@ -3,6 +3,7 @@ package com.kotlinmvvm.ui.auth
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.kotlinmvvm.data.repositories.UserRepository
+import com.kotlinmvvm.utils.Coroutines
 
 
 /*
@@ -38,8 +39,18 @@ class AuthViewModel :ViewModel(){
         /*We should not create other class instance object, It resulting tight coupling*/
         /*Here UserRepository class is dependent to MyApi class, To avoid this will goto dependency injection*/
         /*As of now i will leave this for intial step of MVVM implementation, later it will move to dependency injection basis*/
-        val mLoginResponse=UserRepository().userLogin(email!!,password!!)
-       authListener?.onSuccess(mLoginResponse)
+        /*val mLoginResponse=UserRepository().userLogin(email!!,password!!)
+       authListener?.onSuccess(mLoginResponse)*/
+
+        Coroutines.main{
+
+            val mLoginResponse = UserRepository().userLogin(email!!,password!!)
+            if(mLoginResponse.isSuccessful){
+                authListener?.onSuccess(mLoginResponse.body()?.user!!)
+            }else{
+                authListener?.onFailure("Error Code: ${mLoginResponse.code()}")
+            }
+        }
     }
 
     fun onSignupButtonClick(view:View){

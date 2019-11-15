@@ -1,6 +1,6 @@
 package com.kotlinmvvm.ui.auth
 
-import androidx.lifecycle.LiveData
+import com.kotlinmvvm.data.database.entities.User
 
 
 /*
@@ -19,6 +19,7 @@ import androidx.lifecycle.LiveData
  */
 interface AuthListener {
     fun onStarted()
-    fun onSuccess(mLoginResponse: LiveData<String>)
+    fun onSuccess(user:User)
+    //fun onSuccess(mLoginResponse: LiveData<String>)
     fun onFailure(message:String)
 }
