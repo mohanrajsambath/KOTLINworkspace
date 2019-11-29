@@ -16,10 +16,12 @@
             <option value="$PROJECT_DIR$/appthememode" />
             <option value="$PROJECT_DIR$/cleanarchitechture" />
             <option value="$PROJECT_DIR$/dagger2sample" />
+            <option value="$PROJECT_DIR$/dikoin" />
             <option value="$PROJECT_DIR$/kotdatabinding" />
             <option value="$PROJECT_DIR$/kotlinmvvm" />
             <option value="$PROJECT_DIR$/lottieanimation" />
             <option value="$PROJECT_DIR$/recyviewdatabinding" />
+            <option value="$PROJECT_DIR$/themovieapi" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

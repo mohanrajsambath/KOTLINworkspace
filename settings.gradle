@@ -1,1 +1,1 @@
-include ':KotBasicExercise', ':KotBasicAndroid', ':KotExoplayer', ':KotJavaInteractions', ':KotInitApp', ':kotlinmvvm', ':kotdatabinding', ':appthememode', ':cleanarchitechture', ':lottieanimation', ':dagger2sample', ':recyviewdatabinding'
+include ':KotBasicExercise', ':KotBasicAndroid', ':KotExoplayer', ':KotJavaInteractions', ':KotInitApp', ':kotlinmvvm', ':kotdatabinding', ':appthememode', ':cleanarchitechture', ':lottieanimation', ':dagger2sample', ':recyviewdatabinding', ':themovieapi', ':dikoin'
