@@ -1,9 +1,16 @@
 package mohan.com.recyviewdatabinding.presentation.view;
 
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
+import mohan.com.recyviewdatabinding.R;
+import mohan.com.recyviewdatabinding.databinding.ActivityHomeBinding;
 
 /*
- * Copyright (c) 2019. Created by Mohanraj.S,Innobot Systems on 15/11/19 for KOTLINworkspace
+ * Copyright (c) 2019. Created by Mohanraj.S,Innobot Systems on 15/11/19 for KOTLIN workspace
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -18,4 +25,9 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class HomeActivity extends AppCompatActivity {
 
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ActivityHomeBinding activityHomeBinding = DataBindingUtil.setContentView(this, R.layout.activity_home);
+    }
 }

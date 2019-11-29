@@ -2,4 +2,6 @@
     <string name="app_name">RecyViewDataBinding</string>
     <string name="hello">hello</string>
     <string name="space">\u0020</string>
+    <string name="employee">Employee</string>
+    <string name="git_repo">Git Repo</string>
 </resources>
