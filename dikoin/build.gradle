@@ -17,9 +17,22 @@ android {
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            buildConfigField "String", "BASE_URL", BASE_URL
+        }
+        internal {
+            applicationIdSuffix ".test"
+            buildConfigField "String", "BASE_URL", BASE_URL
+        }
+        staging {
+            applicationIdSuffix ".staging"
+            buildConfigField "String", "BASE_URL", BASE_URL
+        }
         release {
+            buildConfigField "String", "BASE_URL", BASE_URL
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
