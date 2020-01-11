@@ -3,9 +3,9 @@ package com.kotlinmvvm.ui.auth
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProviders
 import com.kotlinmvvm.R
+import com.kotlinmvvm.data.database.entities.User
 import com.kotlinmvvm.databinding.ActivitySignupBinding
 
 class SignupActivity : AppCompatActivity(),AuthListener {
@@ -32,7 +32,9 @@ class SignupActivity : AppCompatActivity(),AuthListener {
     override fun onStarted() {
     }
 
-    override fun onSuccess(mLoginResponse: LiveData<String>) {
+    /*override fun onSuccess(mLoginResponse: LiveData<String>) {
+    }*/
+    override fun onSuccess(user:User) {
     }
 
     override fun onFailure(message: String) {

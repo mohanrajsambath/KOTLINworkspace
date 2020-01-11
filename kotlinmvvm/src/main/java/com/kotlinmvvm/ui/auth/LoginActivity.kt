@@ -3,10 +3,9 @@ package com.kotlinmvvm.ui.auth
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.kotlinmvvm.R
+import com.kotlinmvvm.data.database.entities.User
 import com.kotlinmvvm.databinding.ActivityLoginBinding
 import com.kotlinmvvm.utils.hide
 import com.kotlinmvvm.utils.show
@@ -31,12 +30,8 @@ class LoginActivity : AppCompatActivity(),AuthListener {
         progress_bar.show()
     }
 
-    override fun onSuccess(mLoginResponse: LiveData<String>) {
-        //toast("Login Success")
-
-        mLoginResponse.observe(this, Observer {
-            progress_bar.hide()
-            toast(it) })
+    override fun onSuccess(user: User) {
+        toast("${user.name} is Logged In")
     }
 
     override fun onFailure(message: String) {

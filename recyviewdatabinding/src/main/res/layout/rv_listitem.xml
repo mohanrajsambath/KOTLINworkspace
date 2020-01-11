@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="employee"
+                type="mohan.com.recyviewdatabinding.data.model.Employee"/>
+
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true">
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:elevation="3dp"
+                card_view:cardCornerRadius="5dp"
+                android:backgroundTint="#E0E0E0">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <ImageView
+                        android:id="@+id/ivAvatars"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/hello"
+                        android:scaleType="fitXY"
+                        bind:avatar="@{employee.avatar}"
+                        bind:layout_constraintBottom_toBottomOf="parent"
+                        bind:layout_constraintDimensionRatio="1:1"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        bind:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@tools:sample/avatars[12]" />
+
+                <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Full Name"
+                        android:text="@{`Name : ` +employee.firstName.concat(@string/space).concat(employee.lastName)}"
+                        android:maxLines="3"
+                        android:textSize="18sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        bind:layout_constraintStart_toEndOf="@+id/ivAvatars"
+                        bind:layout_constraintTop_toTopOf="@+id/ivAvatars"
+                        bind:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:text="@{`Email : ` + employee.email}"
+                        android:maxLines="3"
+                        android:textSize="16sp"
+                        android:textColor="#000"
+                        android:textStyle="normal"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        bind:layout_constraintStart_toEndOf="@+id/ivAvatars"
+                        bind:layout_constraintTop_toBottomOf="@+id/tvName"
+                        bind:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
