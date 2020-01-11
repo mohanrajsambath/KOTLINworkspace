@@ -26,6 +26,7 @@ import com.kotlinmvvm.data.database.entities.User
     version = 1
 )
 abstract class AppDatabase:RoomDatabase() {
+
     abstract fun getUserDao():UserDao
 
     companion object{

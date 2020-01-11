@@ -24,13 +24,13 @@ import retrofit2.Response
  * limitations under the License.
  */
 class UserRepository {
-    fun userLogin(email:String,password:String):LiveData<String>{
+    fun userLogin(email:String,password:String): LiveData<String> {
         val mLoginResponseLiveData = MutableLiveData<String>()
 
         /*We should not create other class instance object, It resulting tight coupling*/
         /*Here UserRepository class is dependent to MyApi class, To avoid this will goto dependency injection*/
         /*As of now i will leave this for intial step of MVVM implementation, later it will move to dependency injection basis*/
-        MyApi().userLogin(email,password).enqueue(object: Callback<ResponseBody>{
+        MyApi().userLogin(email,password).enqueue(object: Callback<ResponseBody> {
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 mLoginResponseLiveData.value=t.message
             }

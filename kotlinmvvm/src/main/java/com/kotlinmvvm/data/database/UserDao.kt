@@ -1,6 +1,7 @@
 package com.kotlinmvvm.data.database
 
 import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -22,7 +23,8 @@ import com.kotlinmvvm.data.database.entities.User
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-interface UserDao{
+@Dao
+ interface UserDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun upsert(user:User):Long
     @Query("SELECT * FROM user WHERE uid = $CURRENT_USER_ID")
