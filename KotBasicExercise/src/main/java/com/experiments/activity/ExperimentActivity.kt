@@ -23,11 +23,11 @@ class ExperimentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //AccessBasicClasses()
-        //goMultiLevelInheritance()
-        //goConstructorOverLoading()
-        //goOverridingMethods()
-        //goPropertiesandFields()
+        AccessBasicClasses()
+        goMultiLevelInheritance()
+        goConstructorOverLoading()
+        goOverridingMethods()
+        goPropertiesandFields()
         goInterfaces()
 
     }

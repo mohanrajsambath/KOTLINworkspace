@@ -38,32 +38,32 @@ data class Dates(
 )
 
 data class Result(
+    @SerializedName("popularity")
+    val popularity: Double = 0.0, // 26.398
+    @SerializedName("vote_count")
+    val voteCount: Int = 0, // 723
+    @SerializedName("video")
+    val video: Boolean = false, // false
+    @SerializedName("poster_path")
+    var posterPath: String = "", // /fgGzTEoNxptCRtEOpOPvIEdlxAq.jpg
+    @SerializedName("id")
+    val id: Int = 0, // 535581
     @SerializedName("adult")
     val adult: Boolean = false, // false
     @SerializedName("backdrop_path")
     val backdropPath: String = "", // /cXyfAViYly0Lk2CVpEKgYbt9wKQ.jpg
-    @SerializedName("genre_ids")
-    val genreIds: List<Int> = listOf(),
-    @SerializedName("id")
-    val id: Int = 0, // 535581
     @SerializedName("original_language")
     val originalLanguage: String = "", // en
     @SerializedName("original_title")
     val originalTitle: String = "", // The Dead Don't Die
-    @SerializedName("overview")
-    var overview: String = "", // In a small peaceful town, zombies suddenly rise to terrorize the town. Now three bespectacled police officers and a strange Scottish morgue expert must band together to defeat the undead.
-    @SerializedName("popularity")
-    val popularity: Double = 0.0, // 26.398
-    @SerializedName("poster_path")
-    var posterPath: String = "", // /fgGzTEoNxptCRtEOpOPvIEdlxAq.jpg
-    @SerializedName("release_date")
-    val releaseDate: String = "", // 2019-05-15
+    @SerializedName("genre_ids")
+    val genreIds: List<Int> = listOf(),
     @SerializedName("title")
     var title: String = "", // The Dead Don't Die
-    @SerializedName("video")
-    val video: Boolean = false, // false
+    @SerializedName("overview")
+    var overview: String = "", // In a small peaceful town, zombies suddenly rise to terrorize the town. Now three bespectacled police officers and a strange Scottish morgue expert must band together to defeat the undead.
     @SerializedName("vote_average")
     var voteAverage: Double = 0.3, // 5.4
-    @SerializedName("vote_count")
-    val voteCount: Int = 0 // 723
+    @SerializedName("release_date")
+    val releaseDate: String = ""// 2019-05-15
 )
