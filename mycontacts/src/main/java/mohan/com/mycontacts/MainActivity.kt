@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                 if (phoneNumber > 0) {
                     val cursorPhone = contentResolver.query(
                         ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                        null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=?", arrayOf(id), null)
+                        null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=?", arrayOf(id), ContactsContract.Contacts.SORT_KEY_PRIMARY + " ASC")
 
                     if(cursorPhone!!.count > 0) {
                         while (cursorPhone.moveToNext()) {
