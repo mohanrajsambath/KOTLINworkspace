@@ -57,8 +57,7 @@ class MainActivity : AppCompatActivity() {
             while (cursor.moveToNext()) {
                 val id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID))
                 val name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
-                val phoneNumber = (cursor.getString(
-                    cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))).toInt()
+                val phoneNumber = (cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))).toInt()
 
                 if (phoneNumber > 0) {
                     val cursorPhone = contentResolver.query(
@@ -67,10 +66,8 @@ class MainActivity : AppCompatActivity() {
 
                     if(cursorPhone!!.count > 0) {
                         while (cursorPhone.moveToNext()) {
-                            val phoneNumValue = cursorPhone.getString(
-                                cursorPhone.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-                            builder.append("Contact: ").append(name).append(", Phone Number: ").append(
-                                phoneNumValue).append("\n\n")
+                            val phoneNumValue = cursorPhone.getString(cursorPhone.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+                            builder.append("Contact:").append(name).append(",\n").append("Phone Number:").append(phoneNumValue).append("\n\n")
                             Log.e("Name ===>",phoneNumValue);
                         }
                     }
