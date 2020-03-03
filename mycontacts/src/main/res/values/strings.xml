@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyContacts</string>
     <string name="hello">Hello</string>
+    <string name="copyrights_copy_by_mohan"><![CDATA[Copyrights \u00a9 Mohan]]></string>
 </resources>
