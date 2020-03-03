@@ -22,6 +22,8 @@
             <option value="$PROJECT_DIR$/dagger2sample" />
             <option value="$PROJECT_DIR$/dikoin" />
             <option value="$PROJECT_DIR$/functionalkotlinbook" />
+            <option value="$PROJECT_DIR$/jetpackBasics" />
+            <option value="$PROJECT_DIR$/jetpackViewModelLiveData" />
             <option value="$PROJECT_DIR$/kotdatabinding" />
             <option value="$PROJECT_DIR$/kotlinmvvm" />
             <option value="$PROJECT_DIR$/lottieanimation" />
@@ -32,6 +34,7 @@
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>
