@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/KotInitApp" />
             <option value="$PROJECT_DIR$/KotJavaInteractions" />
             <option value="$PROJECT_DIR$/appthememode" />
+            <option value="$PROJECT_DIR$/awsupload" />
             <option value="$PROJECT_DIR$/camerakot" />
             <option value="$PROJECT_DIR$/cleanarchitechture" />
             <option value="$PROJECT_DIR$/dagger2sample" />
@@ -28,13 +29,13 @@
             <option value="$PROJECT_DIR$/kotlinmvvm" />
             <option value="$PROJECT_DIR$/lottieanimation" />
             <option value="$PROJECT_DIR$/mycontacts" />
+            <option value="$PROJECT_DIR$/passwordvalidator" />
             <option value="$PROJECT_DIR$/recyviewdatabinding" />
             <option value="$PROJECT_DIR$/sso" />
             <option value="$PROJECT_DIR$/themovieapi" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>
